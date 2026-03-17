@@ -1,84 +1,109 @@
-/* GENERAL */
-body {
+/* RESET */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
     font-family: 'Segoe UI', sans-serif;
-    background: #f5f7fa;
+    background: #f4f6f9;
     color: #333;
 }
 
 /* HEADER */
-header {
+.hero {
     background: linear-gradient(135deg, #1e2a38, #3a6073);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.8em;
+.hero h1 {
+    font-size: 3em;
 }
 
-header p {
+.hero p {
     margin-top: 10px;
-    font-size: 1.2em;
     opacity: 0.9;
 }
 
-/* SECTIONS */
-.section {
+/* CARDS */
+.card {
+    background: white;
     max-width: 900px;
     margin: 40px auto;
     padding: 30px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-    transition: transform 0.2s ease;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
 }
 
-.section:hover {
+.card:hover {
     transform: translateY(-5px);
 }
 
+/* TITLES */
 h2 {
-    margin-top: 0;
+    margin-bottom: 20px;
     color: #1e2a38;
 }
 
 /* LIST */
-ul {
-    padding-left: 20px;
+.styled-list {
+    list-style: none;
 }
 
-li {
-    margin-bottom: 10px;
+.styled-list li {
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* CUSTOM BULLET */
+.styled-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #3a6073;
+    font-weight: bold;
 }
 
 /* SOCIALS */
-.social-links {
+.social-container {
     display: flex;
     gap: 15px;
-    margin-top: 15px;
+    flex-wrap: wrap;
 }
 
-.social-links a {
-    text-decoration: none;
-    padding: 10px 15px;
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     background: #1e2a38;
     color: white;
-    border-radius: 8px;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
-.social-links a:hover {
+.social-btn i {
+    font-size: 1.2em;
+}
+
+/* HOVER EFFECT */
+.social-btn:hover {
     background: #3a6073;
+    transform: scale(1.05);
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     background: #1e2a38;
     color: white;
-    margin-top: 40px;
+    margin-top: 50px;
 }
